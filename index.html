@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR.js Video Example</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam;">
+      <!-- Define the marker -->
+      <a-marker preset="hiro">
+        <!-- Define the video as a texture -->
+        <a-video src="#video" width="1" height="0.6" position="0 0 0"></a-video>
+      </a-marker>
+      
+      <!-- Define the camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+    
+    <!-- Video element definition -->
+    <video id="video" src="preservativo.mp4" autoplay loop="true" style="display: none;"></video>
+  </body>
+</html>
